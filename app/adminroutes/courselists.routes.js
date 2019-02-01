@@ -47,7 +47,7 @@ router.get('/add-courselist', isAdmin, function (req, res) {
 // // Post Add User
 router.post('/add-courselist', upload.single('myFile'), (req, res, next) => {
     var file = req.file.path
-
+    var stream = fs.createReadStream(file);
     // res.send(file)
     // console.log(file)
     if (!file) {
@@ -55,42 +55,39 @@ router.post('/add-courselist', upload.single('myFile'), (req, res, next) => {
         error.httpStatusCode = 400
         return next(error)
     }
-    fs.exists(file, function (exists) {
+    csv
+        .fromStream(stream, {
+            headers: ["sno", "program", "department", "courseid", "coursename", "coursetype", "duration", "degreecertificatname", "degreeawardedby", "availabilitycampus", "elligibility", "coursebrochure", "link"],
+            ignoreEmpty: true
+        })
+        .on("data", function (data) {
+            var availabilitycampus = data['availabilitycampus'];
+            var words = availabilitycampus.split(' ');
+            var courses = new Courses({
+                sno: data['sno'],
+                program: data['program'],
+                department: data['department'],
+                courseid: data['courseid'],
+                coursename: data['coursename'],
+                coursetype: data['coursetype'],
+                duration: data['duration'],
+                degreecertificatname: data['degreecertificatname'],
+                degreeawardedby: data['degreeawardedby'],
+                availabilitycampus: words,
+                elligibility: data['elligibility'],
+                coursebrochure: data['coursebrochure'],
+                link: data['link'],
+            });
 
-        if (exists) {//test make sure the file exists
-            var stream = fs.createReadStream(file);
-            csv.fromStream(stream, {
-                headers: ["sno","program","department","courseid","coursename","coursetype","duration","degreecertificatname","degreeawardedby","availabilitycampus","elligibility","coursebrochure","link"
-                ],
-                ignoreEmpty: true
-            })
-                .on("data", function (data) {
-                    var corselist = new Courses();
-                    corselist.sno = data['0'];
-                    corselist.program = data['1'];
-                    corselist.department = data['2'];
-                    corselist.courseid = data['3'];
-                    corselist.coursename = data['4'];
-                    corselist.coursetype = data['5'];
-                    corselist.duration = data['6'];
-                    corselist.degreecertificatname = data['7'];
-                    corselist.degreeawardedby = data['8'];
-                    corselist.availabilitycampus = data['9'];
-                    corselist.elligibility = data['10'];
-                    corselist.coursebrochure = data['11'];
-                    corselist.link = data['12'];
-
-                    corselist.save(function (err, data) {
-                        if (err) console.log(err);
-                        else {
-                            req.flash('success', 'Courselist Upload');
-                            res.redirect('/admin/courselist');
-                        }
-                    });
-                })
-
-        }
-    })
+            courses.save(function (error) {                
+                if (error) {
+                    throw error;
+                }
+            });
+        }).on("end", function () {
+            req.flash('success', 'Courselist Upload');
+            res.redirect('/admin/courselist');
+        });
 
 })
 
