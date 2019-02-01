@@ -1,0 +1,103 @@
+<%- include('../_layouts/adminheader') %>
+
+<%- include('../_layouts/adminsidebar') %>
+
+<!--main-container-part-->
+<div id="content">
+    <!--breadcrumbs-->
+    <div id="content-header">
+
+        <div id="breadcrumb"> <a href="/admin/dashboard" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i>
+                Home</a> <a href="/admin/courselist" class="tip-bottom" data-original-title="">Courselists</a> <a href="#" class="current">Add
+                Edit Courselists </a> </div>
+    </div>
+    <!--End-breadcrumbs-->
+    <!--Action boxes-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <h5>Edit</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="/admin/courselist/edit-courselist/<%= id %>" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">Program</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="program" value="<%= program %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Department</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="department" value="<%= department %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Course ID</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="courseid" value="<%= courseid %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Course Name</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="coursename" value="<%= coursename %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Course Type</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="coursetype" value="<%= coursetype %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Duration</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="duration" value="<%= duration %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Degree / Certificate Name</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="degreecertificatname" value="<%= degreecertificatname %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Degree Awarded by</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="degreeawardedby" value="<%= degreeawardedby %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Availability in Campus</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="availabilitycampus" value="<%= availabilitycampus %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Elligibility</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="elligibility" value="<%= elligibility %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Link</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="link" value="<%= link %>"> </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Course Brochure</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="coursebrochure" value="<%= coursebrochure %>"> </div>
+                            </div>
+                            
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--end-main-container-part-->
+<%- include('../_layouts/adminfooter') %>

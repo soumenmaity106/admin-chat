@@ -1,0 +1,93 @@
+<%- include('../_layouts/adminheader') %>
+
+<%- include('../_layouts/adminsidebar') %>
+
+<!--main-container-part-->
+<div id="content">
+    <!--breadcrumbs-->
+    <div id="content-header">
+
+        <div id="breadcrumb"> <a href="/admin/dashboard" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i>
+                Home</a><a href="#" class="current">Center </a> </div>
+    </div>
+    <!--End-breadcrumbs-->
+    <!--Action boxes-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <%- include('./message') %>  
+                    </div>
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+                            <h5>Center table</h5>
+                        </div>
+                        <div class="widget-content nopadding">
+                            <div style="overflow-x:auto;">
+                                <table class="table table-bordered data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Branch Name</th>
+                                            <th>Address</th>
+                                            <th>Location</th>
+                                            <th>City</th>
+                                            <th>State</th>
+                                            <th>Country</th>
+                                            <th>Zip Code</th>                                            
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% centers.forEach(function(center){ %>
+                                        <tr class="gradeX">
+                                            <td>
+                                                <%= center.branch_name %>
+                                            </td>
+                                            <td>
+                                                <%= center.address %>
+                                            </td>
+                                            <td>
+                                                <%= center.location %>
+                                            </td>
+                                            <td>
+                                                <%= center.city %>
+                                            </td>
+                                            <td>
+                                                <%= center.state %>
+                                            </td>
+                                            <td>
+                                                <%= center.country %>
+                                            </td>
+                                            <td>
+                                                <%= center.zip_code %>
+                                            </td>
+                                                                                       
+                                            <td><a class="btn btn-info" href="/admin/center/edit-center/<%= center._id %>"><i
+                                                        class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                                            <td><a onclick="return confirm('Are you sure you want to delete this item?');" class="confirmdeletion btn btn-danger" href="/admin/center/delete-center/<%= center._id %>"><i
+                                                        class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <% }); %>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../_layouts/adminfooter') %>
+<script>
+    $('.data-table').dataTable({
+        "bJQueryUI": true,
+        "sPaginationType": "full_numbers",
+        "sDom": '<""l>t<"F"fp>'
+    });
+</script>

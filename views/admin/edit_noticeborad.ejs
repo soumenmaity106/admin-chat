@@ -1,0 +1,62 @@
+<%- include('../_layouts/adminheader') %>
+
+<%- include('../_layouts/adminsidebar') %>
+
+<!--main-container-part-->
+<div id="content">
+    <!--breadcrumbs-->
+    <div id="content-header">
+
+        <div id="breadcrumb"> <a href="/admin/dashboard" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i>
+                Home</a> <a href="/admin/noticeborad" class="tip-bottom" data-original-title="">Courselists</a> <a href="#" class="current">Add
+                Edit Noticeborad </a> </div>
+    </div>
+    <!--End-breadcrumbs-->
+    <!--Action boxes-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <h5>Edit</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="/admin/noticeborad/edit-noticeborad/<%= id %>" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">Date</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="date" value="<%= date %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Newstype</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="newstype" value="<%= newstype %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">NewsText</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="newsText" value="<%= newsText %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Details</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="details" value="<%= details %>">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--end-main-container-part-->
+<%- include('../_layouts/adminfooter') %>

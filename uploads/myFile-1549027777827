@@ -1,0 +1,51 @@
+course_id,course_name,course_fees,faculty_name,credits,prequisites
+1,PG Certification Program in E-Commerce,1800,Dr. Srabani Guria Das,4,"B.Tech / BE in any branch of engineering / BCA / Bachelor in Media Sciences with marketing specialization / Bachelor in Graphics & Animation, or any Bachelor’s degree holder from a recognized university. Final year students in the above branches are also eligible."
+2,IATA Travel & Tourism Foundation Programme,1900,Dr. Somajyoti Majumder,3,10+2 passed in any stream
+3,B.Sc. in Culinary Science,2600,Prof. Mrityunjoy Chatterjee,4,10 + 2 passed in any stream from a recognized board. Candidates appearing for Class XII final can also apply.
+4,B.Sc. in Medical Lab Technology,2400,Dr. Supriya Biswas,4,"Passed 10+2 in Physics, Chemistry and Biology"
+5,B.Sc. in Behavioural Science & Applied Psychology,2400,Prof. Mrityunjoy Chatterjee,3,10+2 passed in any stream from a recognised board
+6,BBA – Bachelor of Business Administration,1600,Dr. Somajyoti Majumder,4,10+2 passed in any stream from a recognised board . Candidates appearing for Class XII final can also apply.
+7,BBA (Supply Chain Management) – 3 Yrs.,2800,Deepro Sen,3,10+2 passed in any stream from a recognised board . Candidates appearing for Class XII final can also apply.
+8,BBA (Sports Management),2800,Dr. Srabani Guria Das,3,10 + 2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+9,BBA (Global Business),2800,Prof. Mrityunjoy Chatterjee,4,10 + 2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+10,BCA – Bachelor of Computer Application,2800,Dr. Amal Kumar Chakrabarti,3,10+2 passed in any stream from a recognised board with Mathematics/Statistics/Business Mathematics/Computer Science. Candidates appearing for Class XII final can also apply.
+11,B.Sc. in Interior Designing,300,Dr. Supriya Biswas,3,10+2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+12,B.Sc. in Gaming & Mobile Application Development,700,Deepro Sen,4,10 + 2 passed with individual pass mark in Mathematics/Computer Science as a paper
+13,B.Tech – Bachelor of Technology (Department of Electrical Engineering),900,Dr. Amal Kumar Chakrabarti,2,"Entry Requirements, 10+2 passed in Science stream. Qualifying entry requirement: JEE."
+14,B.Tech – Bachelor of Technology (Department of Computer Science & Engineering),2300,Dr. Somajyoti Majumder,3,"Entry Requirements, 10+2 passed in Science stream. Qualifying entry requirement: JEE."
+15,B.Tech – Bachelor of Technology (Department of Mechanical Engineering),1400,Dr. Srabani Guria Das,4,"Entry Requirements, 10+2 passed in Science stream. Qualifying entry requirement: JEE."
+16,B.Tech – Bachelor of Technology (Department of Civil Engineering),1600,Saptarshi Roychowdhury,2,"Entry Requirements, 10+2 passed in Science stream. Qualifying entry requirement: JEE."
+17,BTTM ( 4 Yrs. – 3 + 1) Bachelor in Travel and Tourism Management,1900,Dr. Debapriya Goswami,4,10+2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+18,BBA (Hospital Management),1200,Dr. Krishnendu Sarkar,3,10+2 passed from any board with English as a subject. Students from any stream can apply. Candidates appearing for Class XII final can also apply
+19,B. Optom. (Bachelor of Optometry),2800,Dr. Krishnendu Sarkar,3,"10+2 pass with Science (Physics, Chemistry, Biology/Maths). Candidates appearing for Class XII final can also apply."
+20,B.Tech – Bachelor of Technology (Electronics and Communications Engineering),300,Deepro Sen,4,"Entry Requirements, 10+2 passed in Science stream. Qualifying entry requirement: JEE."
+21,"B.Sc in Multimedia, Animation and Graphics Design",700,Arghya Chakraborty,2,10 + 2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+22,B.Pharm. – Bachelor of Pharmacy,900,Prof. Naveen Das,3,"Students with Higher Secondary (10+2, Science) or equivalent examination and have qualified AIEEE or the Joint Entrance Examination conducted by the West Bengal Joint Entrance Examination Board for admission to Engineering, Medical & Technological Degree Colleges as recommended by Central Selection Committee (E&T) , Diploma holders in Pharmacy, qualified in West Bengal Joint Entrance Examination for Lateral Entry (WBJELET) are eligible for entry to the 3rd semester (2nd year) of the B. Pharm. Course through counseling by CSC (E&T)."
+23,B.Sc. in Media Science,2300,Deepro Sen,4,"10+2 passed from any board with English as a subject, Students from any stream can apply."
+24,B.Sc. in Hospitality & Hotel Administration,1400,Arghya Chakraborty,2,10+2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+25,Bachelor in Hotel Management & Catering Technology,1600,Dr. Supriya Biswas,4,"Entry Requirements, 10+2 with 45% (40% for reserved category) aggregate passed in any stream. Qualifying entry requirement: JEHOM. Candidates appearing for Class XII final can also apply."
+26,Diploma in Engineering (Mechanical),1900,Dr. Supriya Biswas,3,Jexpo- (30% of intake capacity in each discipline) OR Should be placed in merit list through POLY-40 system (20% of intake capacity in each discipline) after counseling organized by WBSCTE.For Direct Admission ( 50 % of intake capacity in each discipline) The applicants should be passed in Secondary Exam (Madhyamik / Equivalent) with minimum 35% marks (without additional subject) at the qualify examination ( without rounding-up).
+27,Diploma in Engineering (Civil),1200,Dr. Supriya Biswas,3,Jexpo- (30% of intake capacity in each discipline) OR Should be placed in merit list through POLY-40 system (20% of intake capacity in each discipline) after counseling organized by WBSCTE. For Direct Admission ( 50 % of intake capacity in each discipline) The applicants should be passed in Secondary Exam (Madhyamik / Equivalent) with minimum 35% marks (without additional subject) at the qualify examination ( without rounding-up).
+28,B.Sc. in Fashion Design & Management,2800,Deepro Sen,4,10+2 passed in any stream from a recognised board. Candidates appearing for Class XII final can also apply.
+29,MBA in Durgapur,300,Arghya Chakraborty,2,Graduate with a valid score of MAT/WBJEMAT. Final year candidate can also apply.
+30,M.Sc. in Hospitality Management,700,Agnijit Tarafdar,3,Graduate (any stream) from a recognised University or equivalent
+31,M.Sc. in Clinical Psychology,900,Deepro Sen,4,Graduate with minimum 50% marks from any recognized University
+32,Master of Public Health,2300,Agnijit Tarafdar,2,CET
+34,Master of Optometry,1600,Arghya Chakraborty,3,B.Optom or graduate in Optometry
+35,M.Sc. in Dietetics & Nutrition,1900,Agnijit Tarafdar,3,"The candidates should complete their B.Sc. degree under any registered university with subjects like Physics, Botany, Zoology, Chemistry, Biochemistry, Biology and Microbiology. B.Sc. (Family and Community Sciences) with specialization in Nutrition. B.Sc. (Vocational) with specialization in Food Science and Quality control or Clinical Nutrition and Dietetics or Food Science and Technology or B.Tech. Food Science and Technology. B.Sc. (Family and Community Sciences) Programme with specialization in Foods and Nutrition/Public health Nutrition/Dietetics/Food Science and Quality Control."
+36,"Master of Business Administration (MBA) (2 years, Full Time)",1200,Dr. Supriya Biswas,4,Graduate with a valid score of MAT/WBJEMAT. Final year candidate can also apply.
+37,"Master of Business Administration (MBA) (3 years,Part Time)",2800,Dr. Pravangsu Sekhar Das,2,"Graduate with a valid score of MAT/WBJEMAT in any field, preferably with minimum 1 years of job experience."
+33,Master of Tourism & Travel Management (MTTM),1400,Dr. Supriya Biswas,4,Bachelor Degree in any Course from a Recognized University
+38,M.Sc. in Human Computing & Artificial Intelligence,300,Prof. Mrityunjoy Chatterjee,3,Bachelor In Engineering/ Science from any University recognised by UGC
+39,M.Sc. in Information and Cyber Security,700,Prof. Naveen Das,4,Bachelor in Engineering/ Science from any University recognised by UGC
+40,M.Sc. in Data Science & Analytics,900,Prof. Naveen Das,2,Engineering or Science Graduate with Mathematics as a core paper.
+41,M.Sc. in Visual Communication,2300,Somali Chakraborty,4,Graduate of any stream with creative aptitude
+42,M.Sc. in Digital Films,1400,Agnijit Tarafdar,3,Graduate in any stream from a recognized university
+43,M.Sc. in Fashion Management,1600,Agnijit Tarafdar,3,Graduate in any stream from a recognized university
+44,Post Graduate Diploma in Management (PGDM),1900,Dr. Krishnendu Sarkar,4,Graduate. Graduation with a valid score of MAT/CAT/XAT//WBJEMAT. Final year candidate can also apply
+45,PGDM – E-COMM,1200,Agnijit Tarafdar,2,"Xth and XIIth : 60% (cut off). Graduation : 50% (Cut off), preferably B.Tech / B.E. in any branch of engineering / BCA / Bachelor in Graphics & Animation Bachelor’s degree holder from a recognized university. Final year students in the above branches are also eligible."
+46,M.Tech – Masters of Technology (Department of Electronics & Communication Engineering),2800,Prof. Naveen Das,3,B.E/B.Tech graduates with GATE/PGET (preferable)
+47,Master of Hospital Administration,300,Dr. Krishnendu Sarkar,4,Graduate in any discipline with a valid score of MAT/WBJEMAT . Final year students can also apply.
+48,M.Sc. Computer Science,700,Dr. Krishnendu Sarkar,2,Science Graduate (General or Hons.) with Maths / Computer Science
+49,Masters in Pharmacy (Pharmacology / Pharmaceutics),900,Dr. Krishnendu Sarkar,4,B.Pharma with GATE/GPAT (preferable) or through NSHM entrance test
+50,M.Sc. in Media Science,2300,Prof. Naveen Das,3,Graduate in any stream. Final year candidate can also apply.

@@ -1,0 +1,67 @@
+<%- include('../_layouts/adminheader') %>
+
+<%- include('../_layouts/adminsidebar') %>
+
+<!--main-container-part-->
+<div id="content">
+    <!--breadcrumbs-->
+    <div id="content-header">
+
+        <div id="breadcrumb"> <a href="/admin/dashboard" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i>
+                Home</a> <a href="/admin/departmentplacementst" class="tip-bottom" data-original-title="">Departmentplacements</a> <a href="#" class="current">                Edit Departmentplacements </a> </div>
+    </div>
+    <!--End-breadcrumbs-->
+    <!--Action boxes-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <h5>Edit</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="/admin/departmentplacements/edit-departmentplacements/<%= id %>" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">Program</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="year" value="<%= year %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Placement Type</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="placement_type" value="<%= placement_type %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Program</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="program" value="<%= program %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Department</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="department" value="<%= department %>">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Comments</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" name="comments" value="<%= comments %>"> </div>
+                            </div>
+                            
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--end-main-container-part-->
+<%- include('../_layouts/adminfooter') %>
