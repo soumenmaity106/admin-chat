@@ -21,7 +21,13 @@ var UserSchema = mongoose.Schema({
     },
     admin: {
         type:Number,
-    }
+    },
+    resetToken:{
+        type:String,
+    },
+    resetTokenExpiration: { 
+        type: Date
+     }
 });
 
 var User = module.exports = mongoose.model('User',UserSchema);

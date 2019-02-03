@@ -49,7 +49,7 @@ router.post('/add-center', function (req, res) {
             Center.create(authors, function (err, documents) {
                 if (err) throw err;
             });
-
+            
             req.flash('success', 'Center added');
             res.redirect('/admin/center');
         });
