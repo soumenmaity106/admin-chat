@@ -63,29 +63,63 @@ router.post('/reset', function (req, res, next) {
         User.findOne({ email: req.body.email }).then(
             user => {
                 if (!user) {
-                    req.flash('success', 'No User Found');
+                    req.flash('danger', 'No Email Found');
                     return res.redirect('/admin/reset');
                 }
                 user.resetToken = token;
                 user.resetTokenExpiration = Date.now() + 3600000;
-                return user.save()
+                user.save();
+                mailer.sendMail({
+                    to: req.body.email,
+                    from: "project@support.com",
+                    subject: "Password Reset",
+                    html: `<p>Your requested password reset</p>
+                                    <p>click a <a href="http://localhost:3000/admin/reset/${token}">link </a>to set a new password</p>
+                                `
+                });
+                req.flash('success', 'Check your Email Address');
+                res.redirect('/admin/login');
+
             }
-        ).then(result => {
-            res.redirect('/admin/login');
-            mailer.sendMail({
-                to: req.body.email,
-                from: "project@support.com",
-                subject: "Password Reset",
-                html: `<p>Your requested password reset</p>
-                    <p>click a <a href="http://localhost:3000/admin/reset/${token}">link </a>to set a new password</p>
-                `
-            })
+        ).catch(err => {
+            console.log(err)
         })
 
-            .catch(err => {
-                console.log(err)
-            })
     })
+
+
+    // crypto.randomBytes(32, (err, buffer) => {
+    //     if (err) {
+    //         console.log(err);
+    //         res.redirect('/admin/reset');
+    //     }
+    //     const token = buffer.toString('hex');
+    //     User.findOne({ email: req.body.email }).then(
+    //         user => {
+    //             if (!user) {
+    //                 req.flash('danger', 'No Email Found');
+    //                 return res.redirect('/admin/reset');
+    //             }
+    //             user.resetToken = token;
+    //             user.resetTokenExpiration = Date.now() + 3600000;
+    //             return user.save()
+    //         }
+    //     ).then(result => {
+    //         res.redirect('/admin/login');
+    //         mailer.sendMail({
+    //             to: req.body.email,
+    //             from: "project@support.com",
+    //             subject: "Password Reset",
+    //             html: `<p>Your requested password reset</p>
+    //                 <p>click a <a href="http://localhost:3000/admin/reset/${token}">link </a>to set a new password</p>
+    //             `
+    //         })
+    //     })
+
+    //         .catch(err => {
+    //             console.log(err)
+    //         })
+    // })
 });
 
 //Get Edit Edit
@@ -96,9 +130,9 @@ router.get('/reset/:token', function (req, res) {
             console.log(err);
             res.redirect('/admin/login')
         } else {
-            res.render('newpassword',{
-                id : p._id,
-                token:p.resetToken
+            res.render('newpassword', {
+                id: p._id,
+                token: p.resetToken
             });
         }
     });
@@ -113,26 +147,26 @@ router.post("/new-password", (req, res, next) => {
     let restuser
 
     User.findOne({
-        resetToken:Passwordtoken,
-        resetTokenExpiration: {$gt: Date.now()},
-        _id:userID
+        resetToken: Passwordtoken,
+        resetTokenExpiration: { $gt: Date.now() },
+        _id: userID
     }).then(
-        user=>{
+        user => {
             restuser = user;
-            return bcrypt.hash(newPassword,12);
+            return bcrypt.hash(newPassword, 12);
         }
     ).then(
-        hashedPassword =>{
+        hashedPassword => {
             restuser.password = hashedPassword;
             restuser.resetToken = undefined;
             restuser.resetTokenExpiration = undefined;
-           return restuser.save()
+            return restuser.save()
         }
     ).then(
-        result=>{
-            res.redirect('/admin/login') 
+        result => {
+            res.redirect('/admin/login')
         }
-    ).catch(err=>{
+    ).catch(err => {
         console.log(err)
     })
 })

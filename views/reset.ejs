@@ -3,13 +3,15 @@
     <form action="/admin/reset" class="form-vertical" method="POST">
         <p class="normal_text">Enter your e-mail address below and we will send you instructions how to recover a
             password.</p>
-            <% Object.keys(messages).forEach(function (type) { %>
-                <div class="alert alert-<%= type %>">
-                <% messages[type].forEach(function (message) { %>
-                  <%= message %>
-                <% }) %>
-                </div>
-              <% }) %>
+            <%- messages('messages', locals) %>
+
+            <% if (errors) {%>
+            <% errors.forEach(function(error) { %>
+            <div class="alert alert-danger">
+              <%= error.msg %>
+            </div>
+            <% });%>
+            <% } %>
 
         <div class="controls">
             <div class="main_input_box">
